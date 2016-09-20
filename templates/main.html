@@ -13,7 +13,7 @@
    <body class="container" ng-app="app" ng-controller="AppController as appCtrl">
       <h1 class="jumbotron">Hello, World!</h1>
       <h2>The date and time on the server is: {{ time }}</h2>
-      <h3>{{appCtrl.requestedData}}</h3>
+      <h3 ng-bind="appCtrl.requestedData"></h3>
 
       <button class="btn" ng-click="appCtrl.getData()">click for data</button>
 
