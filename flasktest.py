@@ -22,6 +22,15 @@ tasks = [
 
 @app.route('/todo/api/v1.0/tasks', methods=['GET'])
 def get_tasks():
+    print "hello program"
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setwarnings(False)
+    GPIO.setup(17,GPIO.OUT)
+    print "LED on"
+    GPIO.output(17,GPIO.HIGH)
+    time.sleep(1)
+    print "LED off"
+    GPIO.output(17,GPIO.LOW)
     return jsonify({'tasks': tasks})
 
 @app.route("/")
