@@ -6,7 +6,8 @@
       <title>{{ title }}</title>
          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
         <script rel= "stylesheet" src= "{{ url_for('static',filename='scripts/app.js') }}"></script>
    </head>
 
@@ -15,7 +16,7 @@
       <h2>The date and time on the server is: {{ time }}</h2>
       <h3 ng-bind="appCtrl.requestedData"></h3>
 
-      <button class="btn" ng-click="appCtrl.getData()">click for data</button>
+      <button class="btn" ng-click="appCtrl.getData('blue')">click for data</button>
 
       <a class="btn btn-success" href="http://192.168.1.69:9876/green">green</a>
       <a class="btn btn-primary" href="http://192.168.1.69:9876/blue">blue</a>

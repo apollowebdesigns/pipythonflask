@@ -20,7 +20,7 @@ tasks = [
     }
 ]
 
-@app.route('/todo/api/v1.0/tasks', methods=['GET'])
+@app.route('/hits/blue', methods=['GET'])
 def get_tasks():
     print "hello program"
     GPIO.setmode(GPIO.BCM)
@@ -31,6 +31,21 @@ def get_tasks():
     time.sleep(1)
     print "LED off"
     GPIO.output(17,GPIO.LOW)
+    return jsonify({'tasks': tasks})
+
+
+
+@app.route('/hits/green', methods=['GET'])
+def get_tasks():
+    print "hello program"
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setwarnings(False)
+    GPIO.setup(24,GPIO.OUT)
+    print "LED on"
+    GPIO.output(24,GPIO.HIGH)
+    time.sleep(24)
+    print "LED off"
+    GPIO.output(24,GPIO.LOW)
     return jsonify({'tasks': tasks})
 
 @app.route("/")
