@@ -21,7 +21,7 @@ tasks = [
 ]
 
 @app.route('/hits/blue', methods=['GET'])
-def get_tasks():
+def get_blue():
     print "hello program"
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
@@ -34,19 +34,47 @@ def get_tasks():
     return jsonify({'tasks': tasks})
 
 
-
 @app.route('/hits/green', methods=['GET'])
-def get_tasks():
+def get_green():
     print "hello program"
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
     GPIO.setup(24,GPIO.OUT)
     print "LED on"
     GPIO.output(24,GPIO.HIGH)
-    time.sleep(24)
+    time.sleep(1)
     print "LED off"
     GPIO.output(24,GPIO.LOW)
     return jsonify({'tasks': tasks})
+
+@app.route('/hits/red', methods=['GET'])
+def get_red():
+    print "hello program"
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setwarnings(False)
+    GPIO.setup(23,GPIO.OUT)
+    print "LED on"
+    GPIO.output(23,GPIO.HIGH)
+    time.sleep(1)
+    print "LED off"
+    GPIO.output(23,GPIO.LOW)
+    return jsonify({'tasks': tasks})
+
+@app.route('/hits/yellow', methods=['GET'])
+def get_red():
+    print "hello program"
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setwarnings(False)
+    GPIO.setup(15,GPIO.OUT)
+    print "LED on"
+    GPIO.output(15,GPIO.HIGH)
+    time.sleep(1)
+    print "LED off"
+    GPIO.output(15,GPIO.LOW)
+    return jsonify({'tasks': tasks})
+
+
+
 
 @app.route("/")
 def red():
