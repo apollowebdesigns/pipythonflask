@@ -61,7 +61,7 @@ def get_red():
     return jsonify({'tasks': tasks})
 
 @app.route('/hits/yellow', methods=['GET'])
-def get_red():
+def get_yellow():
     print "hello program"
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
