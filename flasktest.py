@@ -73,26 +73,10 @@ def get_yellow():
     GPIO.output(15,GPIO.LOW)
     return jsonify({'tasks': tasks})
 
-
-
-
-@app.route("/")
-def red():
-    print "hello program"
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setwarnings(False)
-    GPIO.setup(23,GPIO.OUT)
-    print "LED on"
-    GPIO.output(23,GPIO.HIGH)
-    time.sleep(1)
-    print "LED off"
-    GPIO.output(23,GPIO.LOW)
-    return "hello world"
-
 ####test
 
 
-@app.route("/page")
+@app.route("/")
 def hello():
    now = datetime.datetime.now()
    timeString = now.strftime("%Y-%m-%d %H:%M")
@@ -102,46 +86,6 @@ def hello():
       }
    return render_template('main.html', **templateData)
 
-
-
-
-
-
-@app.route("/blue")
-def blue():
-    print "hello program"
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setwarnings(False)
-    GPIO.setup(17,GPIO.OUT)
-    print "LED on"
-    GPIO.output(17,GPIO.HIGH)
-    time.sleep(1)
-    print "LED off"
-    GPIO.output(17,GPIO.LOW)
-
-@app.route("/green")
-def green():
-    print "hello program"
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setwarnings(False)
-    GPIO.setup(24,GPIO.OUT)
-    print "LED on"
-    GPIO.output(24,GPIO.HIGH)
-    time.sleep(1)
-    print "LED off"
-    GPIO.output(24,GPIO.LOW)
-
-@app.route("/yellow")
-def yellow():
-    print "hello program"
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setwarnings(False)
-    GPIO.setup(15,GPIO.OUT)
-    print "LED on"
-    GPIO.output(15,GPIO.HIGH)
-    time.sleep(1)
-    print "LED off"
-    GPIO.output(15,GPIO.LOW)
 
 
 if __name__ == "__main__":
