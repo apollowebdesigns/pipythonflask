@@ -9,6 +9,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
             <script src= "{{ url_for('static',filename='scripts/app.js') }}"></script>
+            <script src= "{{ url_for('static',filename='scripts/AppController.js') }}"></script>
             <script src= "{{ url_for('static',filename='scripts/ledService.js') }}"></script>
    </head>
 
@@ -17,11 +18,15 @@
       <h2>The date and time on the server is: {{ time }}</h2>
       <h3 ng-bind="appCtrl.requestedData"></h3>
       <div class="row">
-          <h2 class="jumbotron">Angular Requests</h2>
-          <button class="btn btn-primary" ng-click="appCtrl.getData('blue')">Blue</button>
-          <button class="btn btn-success" ng-click="appCtrl.getData('green')">Green</button>
-          <button class="btn btn-danger" ng-click="appCtrl.getData('red')">Red</button>
-          <button class="btn btn-warning" ng-click="appCtrl.getData('yellow')">Yellow</button>
+          <h2 class="jumbotron" class="row">Angular Requests</h2>
+            <div class="col-md-6">
+                <button class="btn btn-primary" ng-click="appCtrl.getData('blue')">Blue</button>
+                <button class="btn btn-success" ng-click="appCtrl.getData('green')">Green</button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-danger" ng-click="appCtrl.getData('red')">Red</button>
+                <button class="btn btn-warning" ng-click="appCtrl.getData('yellow')">Yellow</button>
+            </div>
       </div>
    </body>
    <!--CDNS-->
