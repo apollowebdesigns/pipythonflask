@@ -1,8 +1,8 @@
 from flask import Flask, render_template, jsonify
 import RPi.GPIO as GPIO
-import RPi.GPIO as GPIO
 import datetime
 import time
+GPIO.setmode(GPIO.BOARD)
 app = Flask(__name__)
 
 tasks = [
@@ -20,58 +20,53 @@ tasks = [
     }
 ]
 
-@app.route('/hits/blue', methods=['GET'])
-def get_blue():
-    print "hello program"
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setwarnings(False)
-    GPIO.setup(17,GPIO.OUT)
-    print "LED on"
-    GPIO.output(17,GPIO.HIGH)
-    time.sleep(1)
-    print "LED off"
-    GPIO.output(17,GPIO.LOW)
+@app.route('/hits/motor', methods=['GET'])
+def motor_move():
+    Motor1A = 16
+    Motor1B = 18
+    Motor1E = 22
+    
+    Motor2A = 23
+    Motor2B = 21
+    Motor2E = 19
+    
+    GPIO.setup(Motor1A,GPIO.OUT)
+    GPIO.setup(Motor1B,GPIO.OUT)
+    GPIO.setup(Motor1E,GPIO.OUT)
+    
+    GPIO.setup(Motor2A,GPIO.OUT)
+    GPIO.setup(Motor2B,GPIO.OUT)
+    GPIO.setup(Motor2E,GPIO.OUT)
+    
+    print "Going forwards"
+    GPIO.output(Motor1A,GPIO.HIGH)
+    GPIO.output(Motor1B,GPIO.LOW)
+    GPIO.output(Motor1E,GPIO.HIGH)
+    
+    GPIO.output(Motor2A,GPIO.HIGH)
+    GPIO.output(Motor2B,GPIO.LOW)
+    GPIO.output(Motor2E,GPIO.HIGH)
+    
+    sleep(2)
+    
+    print "Going backwards"
+    GPIO.output(Motor1A,GPIO.LOW)
+    GPIO.output(Motor1B,GPIO.HIGH)
+    GPIO.output(Motor1E,GPIO.HIGH)
+    
+    GPIO.output(Motor2A,GPIO.LOW)
+    GPIO.output(Motor2B,GPIO.HIGH)
+    GPIO.output(Motor2E,GPIO.HIGH)
+    
+    sleep(2)
+    
+    print "Now stop"
+    GPIO.output(Motor1E,GPIO.LOW)
+    GPIO.output(Motor2E,GPIO.LOW)
+    
+    GPIO.cleanup()
     return jsonify({'tasks': tasks})
 
-
-@app.route('/hits/green', methods=['GET'])
-def get_green():
-    print "hello program"
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setwarnings(False)
-    GPIO.setup(24,GPIO.OUT)
-    print "LED on"
-    GPIO.output(24,GPIO.HIGH)
-    time.sleep(1)
-    print "LED off"
-    GPIO.output(24,GPIO.LOW)
-    return jsonify({'tasks': tasks})
-
-@app.route('/hits/red', methods=['GET'])
-def get_red():
-    print "hello program"
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setwarnings(False)
-    GPIO.setup(23,GPIO.OUT)
-    print "LED on"
-    GPIO.output(23,GPIO.HIGH)
-    time.sleep(1)
-    print "LED off"
-    GPIO.output(23,GPIO.LOW)
-    return jsonify({'tasks': tasks})
-
-@app.route('/hits/yellow', methods=['GET'])
-def get_yellow():
-    print "hello program"
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setwarnings(False)
-    GPIO.setup(15,GPIO.OUT)
-    print "LED on"
-    GPIO.output(15,GPIO.HIGH)
-    time.sleep(1)
-    print "LED off"
-    GPIO.output(15,GPIO.LOW)
-    return jsonify({'tasks': tasks})
 
 ####test
 
