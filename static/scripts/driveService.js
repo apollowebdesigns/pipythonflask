@@ -4,7 +4,7 @@ angular
 
 ledService.$inject = ['$http'];
 
-function ledService ($http) {
+function ledService ($http) { 
 
     this.driveData = _driveData;
 
@@ -16,7 +16,7 @@ function ledService ($http) {
         $http.get("http://192.168.1.67:9876/hits/motor")
         .then(function(response) {
             console.log('data received');
-            vm.requestedData = response.data;
+            this.requestedData = response.data;
         });
     }
 }
