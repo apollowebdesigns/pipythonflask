@@ -78,6 +78,7 @@ def hello():
    timeString = now.strftime("%Y-%m-%d %H:%M")
    templateData = {
       'title' : 'HELLO!',
+      'heading' : 'jumbotron',
       'time': timeString
       }
    return render_template('main.html', **templateData)
