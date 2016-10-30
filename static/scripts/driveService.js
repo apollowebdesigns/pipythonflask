@@ -12,8 +12,8 @@ function ledService ($http) {
 
     var uniqueIPparents = "192.168.1.74";
 
-    function _driveData(color) {
-        $http.get("http://192.168.1.67:9876/hits/motor" + color)
+    function _driveData() {
+        $http.get("http://192.168.1.67:9876/hits/motor")
         .then(function(response) {
             console.log('data received');
             vm.requestedData = response.data;
