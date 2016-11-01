@@ -3,3 +3,4 @@ import RPi.GPIO as GPIO
 import datetime
 import time
 from time import sleep
+GPIO.setmode(GPIO.BOARD)
