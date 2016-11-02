@@ -26,4 +26,6 @@ def motor_move():
     print "LED off"
     GPIO.output(LED,GPIO.LOW)
 
+if __name__ == "__main__":
+   app.run(host='0.0.0.0', port=9877, debug=True)
 ###TODO set up server and client to test led, then move service from python to javascript (or java)
