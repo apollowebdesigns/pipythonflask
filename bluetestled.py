@@ -14,7 +14,7 @@ LED = 2
 
 #########################
 
-@app.route('/hits/motor', methods=['GET'])
+@app.route('/hits/blue', methods=['GET'])
 def motor_move():
 
     GPIO.setmode(GPIO.BCM)
