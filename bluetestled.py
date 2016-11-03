@@ -3,9 +3,9 @@ import RPi.GPIO as GPIO
 import datetime
 import time
 from time import sleep
+GPIO.setmode(GPIO.BCM)
 
 @app.route('/hits/blue', methods=['GET'])
-    GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
     GPIO.setup(17,GPIO.OUT)
     print "LED on"
@@ -15,6 +15,7 @@ from time import sleep
     print "LED off"
     GPIO.output(17,GPIO.LOW)
     GPIO.setmode(GPIO.BCM)
+    return "hello pi"
 
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=9877, debug=True)
