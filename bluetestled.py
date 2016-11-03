@@ -3,9 +3,11 @@ import RPi.GPIO as GPIO
 import datetime
 import time
 from time import sleep
-GPIO.setmode(GPIO.BCM)
+
 
 @app.route('/hits/blue', methods=['GET'])
+def lights():
+    GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
     GPIO.setup(17,GPIO.OUT)
     print "LED on"
