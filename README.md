@@ -8,4 +8,6 @@ raspberry pi python code
 
 # Installing raspberian
 
-sudo dd if=~/Documents/ubuntupi.img of=/dev/rdisk2 bs=1m
+diskutil unmountDisk /dev/disk2
+
+sudo dd if=~/Documents/[raspberianjessie].img of=/dev/rdisk2 bs=1m
