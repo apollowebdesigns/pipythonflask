@@ -1,0 +1,19 @@
+{
+  "name": "javascriptserver",
+  "version": "1.0.0",
+  "description": "a server for the javascript on rgpio pins",
+  "main": "javascriptpintest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apollowebdesigns/pipythonflask.git"
+  },
+  "author": "andy evans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apollowebdesigns/pipythonflask/issues"
+  },
+  "homepage": "https://github.com/apollowebdesigns/pipythonflask#readme"
+}
