@@ -20,3 +20,8 @@ hdmi_force_hotplug=1
 hdmi_group=2
 hdmi_mode=16
 hdmi_drive=2
+
+# npm installation
+node must be installed too
+npm -g install
+npm install
