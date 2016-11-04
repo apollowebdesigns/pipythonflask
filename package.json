@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/apollowebdesigns/pipythonflask/issues"
   },
-  "homepage": "https://github.com/apollowebdesigns/pipythonflask#readme"
+  "homepage": "https://github.com/apollowebdesigns/pipythonflask#readme",
+  "devDependencies": {
+    "pi-gpio": "0.0.8"
+  }
 }
