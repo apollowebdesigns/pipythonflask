@@ -39,7 +39,18 @@ import com.pi4j.io.gpio.RaspiPin;
  *
  * @author Robert Savage
  */
-public class ControlGpioExample {
+
+// final GpioController gpio = GpioFactory.getInstance();
+// final GpioPinDigitalOutput pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_01, "MyLED", PinState.LOW);
+// pin.setShutdownOptions(true, PinState.LOW);
+
+// pin.high();
+// Thread.sleep(1000);
+// pin.low();
+
+// gpio.shutdown();
+
+public class javapintest {
 
     public static void main(String[] args) throws InterruptedException {
 
