@@ -8,7 +8,7 @@ function ledService ($http) {
 
     this.driveData = _driveData;
 
-    var uniqueIP = "192.168.1.67";
+    var uniqueIP = "192.168.1.69";
 
     var uniqueIPparents = "192.168.1.74";
 
