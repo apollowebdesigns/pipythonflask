@@ -21,6 +21,15 @@ tasks = [
     }
 ]
 
+forwards = [
+    {
+        'id': 2,
+        'direction': u'forwards',
+        'description': u'motor is moving fowards', 
+        'done': true
+    }
+]
+
 @app.route('/hits/forward', methods=['GET'])
 def move_forwards:
     Motor1A = 16
@@ -55,7 +64,7 @@ def move_forwards:
     GPIO.output(Motor2E,GPIO.LOW)
     
     GPIO.cleanup()
-    return jsonify({'tasks': tasks})
+    return jsonify({'forwards': forwards})
 
 
 
