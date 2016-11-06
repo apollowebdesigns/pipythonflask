@@ -13,7 +13,7 @@ function ledService ($http) {
     var uniqueIPparents = "192.168.1.74";
 
     function _driveData() {
-        $http.get("http://192.168.1.67:9876/hits/motor")
+        $http.get("http://192.168.1.69:9876/hits/motor")
         .then(function(response) {
             console.log('data received');
             this.requestedData = response.data;
@@ -21,7 +21,7 @@ function ledService ($http) {
     }
 
     function _driveForwards() {
-        $http.get("http://192.168.1.67:9876/hits/forwards")
+        $http.get("http://192.168.1.69:9876/hits/forwards")
         .then(function(response) {
             console.log('fowards hit');
             this.requestedData = response.data;
