@@ -1,13 +1,13 @@
 angular
     .module('app')
-    .service('driveService', ledService);
+    .service('driveService', driveService);
 
-ledService.$inject = ['$http'];
+driveService.$inject = ['$http'];
 
-function ledService ($http) { 
+function driveService ($http) { 
 
     this.driveData = _driveData;
-
+    this.driveForwards = _driveForwards;
     var uniqueIP = "192.168.1.69";
 
     var uniqueIPparents = "192.168.1.74";
