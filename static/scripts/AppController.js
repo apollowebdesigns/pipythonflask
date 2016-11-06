@@ -10,6 +10,6 @@ function AppController(ledService, driveService) {
     vm.requestedData = 'test data';
     vm.getData = ledService.getData;
 
-    vm.driveData = ledService.driveData;
+    vm.driveData = driveService.driveData;
     
 }
