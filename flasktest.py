@@ -31,7 +31,7 @@ forwards = [
 ]
 
 @app.route('/hits/forward', methods=['GET'])
-def move_forwards:
+def move_forwards():
     Motor1A = 16
     Motor1B = 18
     Motor1E = 22
