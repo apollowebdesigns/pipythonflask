@@ -21,6 +21,7 @@ function driveService ($http) {
     }
 
     function _driveForwards() {
+        console.log('fowards function entered');
         $http.get("http://192.168.1.69:9876/hits/forwards")
         .then(function(response) {
             console.log('fowards hit');
