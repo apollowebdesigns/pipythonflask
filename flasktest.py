@@ -26,7 +26,7 @@ forwards = [
         'id': 2,
         'direction': u'forwards',
         'description': u'motor is moving fowards', 
-        'done': true
+        'done': True
     }
 ]
 
