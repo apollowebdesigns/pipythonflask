@@ -23,7 +23,7 @@ function ledService ($http) {
     function _driveForwards() {
         $http.get("http://192.168.1.67:9876/hits/forwards")
         .then(function(response) {
-            console.log('data received');
+            console.log('fowards hit');
             this.requestedData = response.data;
         });
     }
