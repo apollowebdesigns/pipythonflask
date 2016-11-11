@@ -64,7 +64,7 @@ def move_forwards():
     GPIO.output(Motor2E,GPIO.LOW)
     
     GPIO.cleanup()
-    return jsonify({'forwards': forwards})
+    return "test"
 
 
 
@@ -113,7 +113,7 @@ def motor_move():
     GPIO.output(Motor2E,GPIO.LOW)
     
     GPIO.cleanup()
-    return jsonify({'tasks': tasks})
+    return "test"
 
 
 ####test
