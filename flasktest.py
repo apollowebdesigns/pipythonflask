@@ -118,9 +118,9 @@ def motor_move():
         GPIO.output(Motor2E,GPIO.LOW)
         
         GPIO.cleanup()
-
-    motor_test()
-    return "test"
+        return
+    
+    return motor_test()
 
 
 ####test
