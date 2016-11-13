@@ -3,8 +3,11 @@ import RPi.GPIO as GPIO
 import datetime
 import time
 from time import sleep
+from flask_cors import CORS, cross_origin
 GPIO.setmode(GPIO.BOARD)
 app = Flask(__name__)
+CORS(app)
+
 
 tasks = [
     {
