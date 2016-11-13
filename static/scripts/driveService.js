@@ -2,9 +2,9 @@ angular
     .module('app')
     .service('driveService', driveService);
 
-driveService.$inject = ['$http'];
+driveService.$inject = ['$http', '$log'];
 
-function driveService ($http) { 
+function driveService ($http, $log) { 
 
     this.driveData = _driveData;
     this.driveForwards = _driveForwards;
@@ -13,6 +13,7 @@ function driveService ($http) {
     var uniqueIPparents = "192.168.1.74";
 
     function _driveData() {
+        $log.info('driving function entered function entered');
         $http.get("http://192.168.1.69:9876/hits/motor")
         .then(function(response) {
             console.log('data received');
@@ -21,7 +22,7 @@ function driveService ($http) {
     }
 
     function _driveForwards() {
-        console.log('fowards function entered');
+        $log.info('fowards function entered');
         $http.get("http://192.168.1.69:9876/hits/forwards")
         .then(function(response) {
             console.log('fowards hit');
