@@ -35,6 +35,8 @@ CORS(app)
 
 @app.route('/hits/forwards', methods=['GET'])
 def move_forwards():
+
+    GPIO.setmode(GPIO.BOARD)
     
     Motor1A = 16
     Motor1B = 18
@@ -76,6 +78,7 @@ def move_forwards():
 def motor_move():
 
     def motor_test():
+        
         Motor1A = 16
         Motor1B = 18
         Motor1E = 22
@@ -117,7 +120,7 @@ def motor_move():
         print "Now stop"
         GPIO.output(Motor1E,GPIO.LOW)
         GPIO.output(Motor2E,GPIO.LOW)
-        GPIO.setmode(GPIO.BOARD)
+        
         GPIO.cleanup()
         return
     
