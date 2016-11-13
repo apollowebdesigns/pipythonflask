@@ -117,7 +117,7 @@ def motor_move():
         print "Now stop"
         GPIO.output(Motor1E,GPIO.LOW)
         GPIO.output(Motor2E,GPIO.LOW)
-        
+        GPIO.setmode(GPIO.BOARD)
         GPIO.cleanup()
         return
     
@@ -126,18 +126,18 @@ def motor_move():
 
 ####test
 
-@app.route('/hits/blue', methods=['GET'])
-def lights():
-    GPIO.setwarnings(False)
-    GPIO.setup(18,GPIO.OUT)
-    print "LED on"
-    GPIO.output(18,GPIO.HIGH)
-    time.sleep(1)
-    GPIO.output(18,GPIO.LOW)
-    print "LED off"
-    GPIO.output(18,GPIO.LOW)
-    GPIO.setmode(GPIO.BCM)
-    return "hello pi"
+# @app.route('/hits/blue', methods=['GET'])
+# def lights():
+#     GPIO.setwarnings(False)
+#     GPIO.setup(18,GPIO.OUT)
+#     print "LED on"
+#     GPIO.output(18,GPIO.HIGH)
+#     time.sleep(1)
+#     GPIO.output(18,GPIO.LOW)
+#     print "LED off"
+#     GPIO.output(18,GPIO.LOW)
+#     GPIO.setmode(GPIO.BCM)
+#     return "hello pi"
 
 
 @app.route("/")
