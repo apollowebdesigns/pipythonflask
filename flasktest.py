@@ -33,7 +33,7 @@ CORS(app)
 #     }
 # ]
 
-@app.route('/hits/forward', methods=['GET'])
+@app.route('/hits/forwards', methods=['GET'])
 def move_forwards():
     Motor1A = 16
     Motor1B = 18
