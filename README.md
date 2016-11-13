@@ -6,6 +6,10 @@ raspberry pi python code
 *need to connect led via python and hit server
 *get LED powed by javascript (or java) middleware
 
+## Using pip
+
+$ pip install -U flask-cors
+
 # Installing raspberian
 
 diskutil list
