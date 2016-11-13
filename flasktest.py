@@ -118,6 +118,19 @@ def motor_move():
 
 ####test
 
+@app.route('/hits/blue', methods=['GET'])
+def lights():
+    GPIO.setwarnings(False)
+    GPIO.setup(18,GPIO.OUT)
+    print "LED on"
+    GPIO.output(18,GPIO.HIGH)
+    time.sleep(1)
+    GPIO.output(18,GPIO.LOW)
+    print "LED off"
+    GPIO.output(18,GPIO.LOW)
+    GPIO.setmode(GPIO.BCM)
+    return "hello pi"
+
 
 @app.route("/")
 def hello():
