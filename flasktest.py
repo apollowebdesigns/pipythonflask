@@ -8,31 +8,6 @@ GPIO.setmode(GPIO.BOARD)
 app = Flask(__name__)
 CORS(app)
 
-
-# tasks = [
-#     {
-#         'id': 1,
-#         'title': u'Buy groceries',
-#         'description': u'Milk, Cheese, Pizza, Fruit, Tylenol', 
-#         'done': False
-#     },
-#     {
-#         'id': 2,
-#         'title': u'Learn Python',
-#         'description': u'Need to find a good Python tutorial on the web', 
-#         'done': False
-#     }
-# ]
-
-# forwards = [
-#     {
-#         'id': 3,
-#         'direction': u'forwards',
-#         'description': u'motor is moving fowards', 
-#         'done': True
-#     }
-# ]
-
 @app.route('/hits/forwards', methods=['GET'])
 def move_forwards():
 
