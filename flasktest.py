@@ -4,7 +4,7 @@ import datetime
 import time
 from time import sleep
 from flask_cors import CORS, cross_origin
-from motormove import motor_move
+import motormove
 GPIO.setmode(GPIO.BOARD)
 app = Flask(__name__)
 CORS(app)
@@ -51,7 +51,7 @@ def move_forwards():
 
 
 @app.route('/hits/motor', methods=['GET'])
-motor_move()
+motormove.motor_move().motor_move()
 
 
 ####test
