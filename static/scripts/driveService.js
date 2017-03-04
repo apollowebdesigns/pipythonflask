@@ -12,6 +12,8 @@ function driveService ($http, $log) {
 
     var uniqueIPparents = "192.168.1.74";
 
+    var blackSdCardIp = "";
+
     function _driveData() {
         $log.info('driving function entered function entered');
         $http.get("http://192.168.1.69:9876/hits/motor")
