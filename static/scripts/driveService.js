@@ -12,7 +12,7 @@ function driveService ($http, $log) {
 
     var uniqueIPparents = "192.168.1.74";
 
-    var blackSdCardIp = "";
+    var redSdCardIp = "192.168.1.73";
 
     function _driveData() {
         $log.info('driving function entered function entered');
