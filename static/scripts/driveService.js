@@ -5,13 +5,10 @@ angular
 driveService.$inject = ['$http', '$log'];
 
 function driveService ($http, $log) { 
-
     this.driveData = _driveData;
     this.driveForwards = _driveForwards;
     var uniqueIP = "192.168.1.69";
-
     var uniqueIPparents = "192.168.1.74";
-
     var redSdCardIp = "192.168.1.73";
 
     function _driveData() {
