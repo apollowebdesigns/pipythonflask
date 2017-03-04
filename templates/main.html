@@ -20,9 +20,11 @@
    <body class="container" ng-app="app" ng-controller="AppController as appCtrl">
       <h2>The date and time on the server is: {{ time }}</h2>
       <h3 ng-bind="appCtrl.requestedData"></h3>
+      <div class="container">
+        <h2>What can the pi see?</h2>
+        <iframe src="http://192.168.1.73:2222/html/min.php" frameborder="0" class="iframe"></iframe>
+      </div>
       <!--new section for powering motors-->
-      <h2>What can the pi see?</h2>
-      <iframe src="http://192.168.1.73:2222/html/min.php" frameborder="0" class="iframe"></iframe>
       <div>
         <h1 class="{{heading}}">Pi Motors</h1>
         <div class="row">
