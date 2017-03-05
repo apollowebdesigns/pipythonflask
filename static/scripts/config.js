@@ -2,8 +2,8 @@ angular
     .module('app')
     .config(function($routeProvider) {
         $routeProvider
-            .when('/test', {
-                templateUrl : 'pages/home.html',
+            .when('/testjs', {
+                templateUrl : '/test.html',
                 controller  : 'AppController'
             })
     });
