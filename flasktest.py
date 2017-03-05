@@ -114,6 +114,19 @@ def lights():
     return "hello pi"
 
 
+@app.route("/test")
+def hello():
+   now = datetime.datetime.now()
+   timeString = now.strftime("%Y-%m-%d %H:%M")
+   templateData = {
+      'title' : 'HELLO!',
+      'heading' : 'jumbotron',
+      'forwards' : 'Forwards',
+      'backwards' : 'Backwards',
+      'time': timeString
+      }
+   return render_template('test.html', **templateData)
+
 @app.route("/")
 def hello():
    now = datetime.datetime.now()
