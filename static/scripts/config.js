@@ -1,8 +1,12 @@
 angular
     .module('app')
-    .config(function($routeProvider) {
-        $routeProvider
-            .when('/', {
-                templateUrl : '/test.html'
-            })
+    .config(function($stateProvider, $urlRouterProvider) {
+    
+    $urlRouterProvider.otherwise('/home');
+    
+    $stateProvider
+        .state('home', {
+            url: '/home',
+            templateUrl: '/test.html'
+        })
     });
