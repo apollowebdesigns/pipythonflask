@@ -115,7 +115,7 @@ def lights():
 
 
 @app.route("/test")
-def hello():
+def testhello():
    now = datetime.datetime.now()
    timeString = now.strftime("%Y-%m-%d %H:%M")
    templateData = {
