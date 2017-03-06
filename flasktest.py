@@ -114,8 +114,8 @@ def lights():
     return "hello pi"
 
 
-@app.route("/test")
-def testhello():
+@app.route("/map")
+def map():
    now = datetime.datetime.now()
    timeString = now.strftime("%Y-%m-%d %H:%M")
    templateData = {
@@ -125,7 +125,7 @@ def testhello():
       'backwards' : 'Backwards',
       'time': timeString
       }
-   return render_template('test.html', **templateData)
+   return render_template('map.html', **templateData)
 
 @app.route("/")
 def hello():
