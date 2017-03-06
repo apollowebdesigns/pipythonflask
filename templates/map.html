@@ -16,7 +16,7 @@
         <script src= "{{ url_for('static',filename='scripts/ledService.js') }}"></script>
         <script src= "{{ url_for('static',filename='scripts/driveService.js') }}"></script>
     </head>
-    <body>
+    <body ng-app="app" ng-controller="AppController as appCtrl">
         <leaflet width="100%" height="480px"></leaflet>
     </body>
 </html>
