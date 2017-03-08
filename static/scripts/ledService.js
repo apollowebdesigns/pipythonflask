@@ -2,9 +2,9 @@ angular
     .module('app')
     .service('ledService', ledService);
 
-ledService.$inject = ['$http'];
+ledService.$inject = ['$http', '$log'];
 
-function ledService ($http) {
+function ledService ($http, $log) {
     this.getData = _getData;
     var uniqueIP = "192.168.1.69", 
         uniqueIPparents = "192.168.1.74";
@@ -12,7 +12,7 @@ function ledService ($http) {
     function _getData(color) {
         $http.get("http://192.168.1.69:9876/hits/" + color)
         .then(function(response) {
-            console.log('data received');
+            $log.info('data received');
             vm.requestedData = response.data;
         });
     }
