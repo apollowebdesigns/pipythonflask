@@ -10,6 +10,7 @@ function ledService ($http, $log) {
         uniqueIPparents = "192.168.1.74";
 
     function _getData(color) {
+        $log.info("light function entered");
         $http.get("/hits/" + color)
         .then(function(response) {
             $log.info('data received');
