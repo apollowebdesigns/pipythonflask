@@ -9,9 +9,9 @@ function ledService ($http, $log) {
     var uniqueIP = "192.168.1.69", 
         uniqueIPparents = "192.168.1.74";
 
-    function _getData(color) {
+    function _getData() {
         $log.info("light function entered");
-        $http.get("/hits/" + color)
+        $http.get("http://192.168.1.73:9876/hits/blue")
         .then(function(response) {
             $log.info('data received');
             vm.requestedData = response.data;
