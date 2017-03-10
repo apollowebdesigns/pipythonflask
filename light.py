@@ -1,3 +1,10 @@
+from flask import Flask, render_template, jsonify
+import RPi.GPIO as GPIO
+import datetime
+import time
+from time import sleep
+from flask_cors import CORS, cross_origin
+
 def lights():
     GPIO.setmode(GPIO.BOARD)
     GPIO.setwarnings(False)
