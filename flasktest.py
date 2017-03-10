@@ -4,7 +4,7 @@ import datetime
 import time
 from time import sleep
 from flask_cors import CORS, cross_origin
-import motormove
+import light
 GPIO.setmode(GPIO.BOARD)
 app = Flask(__name__)
 CORS(app)
@@ -102,16 +102,7 @@ def motor_test():
 ####test
 
 @app.route('/hits/blue', methods=['GET'])
-def lights():
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setwarnings(False)
-    GPIO.setup(12,GPIO.OUT)
-    print "LED on"
-    GPIO.output(12,GPIO.HIGH)
-    time.sleep(1)
-    print "LED off"
-    GPIO.output(12,GPIO.LOW)
-    return "hello pi"
+light.lights()
 
 
 @app.route("/map")
