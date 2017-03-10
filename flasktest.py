@@ -102,7 +102,7 @@ def motor_test():
 ####test
 
 @app.route('/hits/blue', methods=['GET'])
-light.lights()
+light.lights
 
 
 @app.route("/map")
