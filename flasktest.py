@@ -52,6 +52,7 @@ def move_forwards():
 
 @app.route('/hits/motor', methods=['GET'])
 def motor_test():
+    GPIO.setmode(GPIO.BOARD)
     Motor1A = 16
     Motor1B = 18
     Motor1E = 22
