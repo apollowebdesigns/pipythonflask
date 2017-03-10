@@ -14,8 +14,6 @@ CORS(app)
 def move_forwards():
     return motorforwards.move()
 
-
-
 @app.route('/hits/motor', methods=['GET'])
 def motor_test():
     GPIO.setmode(GPIO.BOARD)
