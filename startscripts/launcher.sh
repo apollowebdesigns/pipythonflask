@@ -5,4 +5,4 @@
 cd /
 cd /home/pi/Documents/pythonpi/pipythonflask
 git pull
-sudo python flasktest.py
+sudo python __main__.py
