@@ -25,16 +25,7 @@ def lightroute():
 
 @app.route("/map")
 def map():
-   now = datetime.datetime.now()
-   timeString = now.strftime("%Y-%m-%d %H:%M")
-   templateData = {
-      'title' : 'HELLO!',
-      'heading' : 'jumbotron',
-      'forwards' : 'Forwards',
-      'backwards' : 'Backwards',
-      'time': timeString
-      }
-   return render_template('map.html', **templateData)
+   return render_template('map.html')
 
 @app.route("/")
 def hello():
