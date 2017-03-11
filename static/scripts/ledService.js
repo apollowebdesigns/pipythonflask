@@ -12,7 +12,7 @@ function ledService ($http, $log) {
 
     function _getData() {
         $log.info("light function entered");
-        $http.get("http://192.168.1.73:9876/hits/blue")
+        $http.get("http://192.168.1.73:9877/hits/blue")
         .then(function(response) {
             $log.info('data received');
             vm.requestedData = response.data;
