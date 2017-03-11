@@ -5,7 +5,6 @@ angular
 ledService.$inject = ['$http', '$log'];
 
 function ledService ($http, $log) {
-    var vm = this;
     this.getData = _getData;
     var uniqueIP = "192.168.1.69", 
         uniqueIPparents = "192.168.1.74";
@@ -15,7 +14,7 @@ function ledService ($http, $log) {
         $http.get("http://192.168.1.73:9876/hits/blue")
         .then(function(response) {
             $log.info('data received');
-            vm.requestedData = response.data;
+            this.requestedData = response.data;
         });
     }
 }
