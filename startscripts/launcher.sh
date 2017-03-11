@@ -5,4 +5,4 @@
 cd /
 cd /home/pi/Documents/pythonpi/pipythonflask
 git pull
-sudo python __main__.py
+sudo python app.py
