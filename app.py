@@ -62,14 +62,9 @@ def motor_test():
     GPIO.cleanup()
     return "hello"
 
-
-####test
-
 @app.route('/hits/blue', methods=['GET'])
 def lightroute():
     return light.lights()
-
-
 
 @app.route("/map")
 def map():
