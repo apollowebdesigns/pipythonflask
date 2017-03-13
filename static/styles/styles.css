@@ -1,18 +1,8 @@
-.jumbotron {
-    background-color: #cce6ff;
-}
-
-.container {
-    background-color: #f2f2f2;
-}
-
 .iframe {
     width: 100%;
     height: 400px;
     z-index: 50;
 }
-
-
 
 /* Custom Stylesheet */
 /**
