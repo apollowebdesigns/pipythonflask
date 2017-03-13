@@ -49,10 +49,6 @@
             <button class="btn" ng-click="appCtrl.diveData()">{{ backwards }}</button>
         </div>
       </div>
-      <div class="row">
-          <h2 class="jumbotron">Sound the horn!</h2>
-          <button class="btn btn-primary" ng-click="appCtrl.getData()">Beep Beep Beep</button>
-      </div>
    </body>
    <!--CDNS-->
 </html>
@@ -127,9 +123,11 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+            <h5 class="center">Make some noise</h5>
+            <div class="row">
+              <h2 class="light">Sound the horn!</h2>
+              <button class="btn btn-primary" ng-click="appCtrl.getData()">Beep Beep Beep</button>
+            </div>
           </div>
         </div>
 
