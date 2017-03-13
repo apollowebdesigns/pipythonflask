@@ -44,7 +44,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="{{ url_for('static',filename='styles/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body>
+<body ng-app="app" ng-controller="AppController as appCtrl">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">Logo</a>
