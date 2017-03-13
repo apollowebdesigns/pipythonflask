@@ -16,40 +16,6 @@
             <script src= "{{ url_for('static',filename='scripts/ledService.js') }}"></script>
             <script src= "{{ url_for('static',filename='scripts/driveService.js') }}"></script>
    </head>
-
-   <body class="container" ng-app="app" ng-controller="AppController as appCtrl">
-       <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Raspberry Pi Control</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="/map">Pi Location</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <h3 ng-bind="appCtrl.requestedData"></h3>
-      <div class="container">
-        <h2>What can the pi see?</h2>
-        <iframe src="http://192.168.1.73:2222/html/min.php" frameborder="0" class="iframe"></iframe>
-      </div>
-      <!--new section for powering motors-->
-      <div>
-        <h1 class="{{heading}}">Pi Motors</h1>
-        <div class="row">
-            <button class="btn" ng-click="appCtrl.driveForwards()">{{ forwards }}</button>
-            <button class="btn" ng-click="appCtrl.diveData()">{{ backwards }}</button>
-        </div>
-      </div>
-   </body>
    <!--CDNS-->
 </html>
 <!DOCTYPE html>
@@ -70,16 +36,14 @@
         <script src= "{{ url_for('static',filename='scripts/AppController.js') }}"></script>
         <script src= "{{ url_for('static',filename='scripts/ledService.js') }}"></script>
         <script src= "{{ url_for('static',filename='scripts/driveService.js') }}"></script>
-</head>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Parallax Template - Materialize</title>
+          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <title>Parallax Template - Materialize</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   <nav class="white" role="navigation">
@@ -105,7 +69,7 @@
           <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+          <a href="/map" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
         </div>
         <br><br>
 
@@ -144,7 +108,19 @@
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
             <h5 class="center">Easy to work with</h5>
-
+            <h3 ng-bind="appCtrl.requestedData"></h3>
+            <div class="container">
+              <h2>What can the pi see?</h2>
+              <iframe src="http://192.168.1.73:2222/html/min.php" frameborder="0" class="iframe"></iframe>
+            </div>
+            <!--new section for powering motors-->
+            <div>
+              <h1 class="{{heading}}">Pi Motors</h1>
+              <div class="row">
+                  <button class="btn" ng-click="appCtrl.driveForwards()">{{ forwards }}</button>
+                  <button class="btn" ng-click="appCtrl.diveData()">{{ backwards }}</button>
+              </div>
+            </div>
             <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
           </div>
         </div>
