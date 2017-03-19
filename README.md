@@ -29,3 +29,8 @@ hdmi_drive=2
 node must be installed too
 npm -g install
 npm install
+
+
+# second raspberry pi connection
+
+ip address 192.168.1.67
