@@ -33,7 +33,7 @@ def move():
     GPIO.output(Motor2B,GPIO.HIGH)
     GPIO.output(Motor2E,GPIO.HIGH)
     
-    sleep(10)
+    sleep(2)
 
     print "Now stop"
     GPIO.output(Motor1E,GPIO.LOW)
