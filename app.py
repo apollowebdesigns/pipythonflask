@@ -6,6 +6,7 @@ from time import sleep
 from flask_cors import CORS, cross_origin
 import light
 import motorforwards
+import motorbackwards
 import motortest
 GPIO.setmode(GPIO.BOARD)
 app = Flask(__name__)
@@ -24,6 +25,10 @@ templateDataInit = TemplateData('HELLO!', 'jumbotron', 'Forwards', 'Backwards', 
 @app.route('/hits/forwards', methods=['GET'])
 def move_forwards():
     return motorforwards.move()
+
+@app.route('/hits/backwards', methods=['GET'])
+def move_forwards():
+    return motorbackwards.move()
 
 @app.route('/hits/motor', methods=['GET'])
 def motor_test():
