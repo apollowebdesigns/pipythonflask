@@ -27,7 +27,7 @@ def move_forwards():
     return motorforwards.move()
 
 @app.route('/hits/backwards', methods=['GET'])
-def move_forwards():
+def move_backwards():
     return motorbackwards.move()
 
 @app.route('/hits/motor', methods=['GET'])
@@ -58,4 +58,4 @@ def hello():
 
 
 if __name__ == "__main__":
-   app.run(host='0.0.0.0', port=9876, debug=True, threaded=True)
+   app.run(host='0.0.0.0', port=80, debug=True, threaded=True)
