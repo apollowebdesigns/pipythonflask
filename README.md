@@ -34,3 +34,7 @@ npm install
 # second raspberry pi connection
 
 ip address 192.168.1.67
+
+# internal address
+
+192.168.1.73:9876
