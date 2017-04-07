@@ -22,6 +22,8 @@ class TemplateData:
 
 templateDataInit = TemplateData('HELLO!', 'jumbotron', 'Forwards', 'Backwards', datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
 
+@app.route('http://192.168.1.73:2222/html/min.php', endpoint='camera_feed')
+
 @app.route('/hits/forwards', methods=['GET'])
 def move_forwards():
     return motorforwards.move()
