@@ -23,7 +23,7 @@
         <script src= "{{ url_for('static',filename='scripts/ledService.js') }}"></script>
         <script src= "{{ url_for('static',filename='scripts/driveService.js') }}"></script>
         <script src= "{{ url_for('static',filename='scripts/driveService.js') }}"></script>
-        <script src= "{{ url_for('static',filename='scripts/components/main.component.js') }}"></script>
+        <script src= "{{ url_for('static',filename='scripts/components/camera/main.component.js') }}"></script>
           <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
         <title>Parallax Template - Materialize</title>
@@ -109,9 +109,7 @@
     <main-component></main-component>
   </div>
 
-  <div class="parallax-container valign-wrapper">
-    <div class="parallax"><iframe src="http://192.168.1.73:2222/html/min.php" frameborder="0" class="iframe"></iframe></div>
-  </div>
+  <camera-component></camera-component>
 
   <div class="container">
     <div class="section">
