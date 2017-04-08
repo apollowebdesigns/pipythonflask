@@ -1,32 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
-    <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="{{ url_for('static',filename='styles/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    
-    <title>{{ title }}</title>
-        <!--cdn imports-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-        <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-leaflet-directive/0.10.0/angular-leaflet-directive.min.js"></script>
-        <!--customjs imports-->
-        <!--jQuery imports-->
-        <script src= "{{ url_for('static',filename='scripts/jquery/init.js') }}"></script>
-        <!--AngularJS imports-->
-        <script src= "{{ url_for('static',filename='scripts/app.js') }}"></script>
-        <script src= "{{ url_for('static',filename='scripts/MapController.js') }}"></script>
-        <script src= "{{ url_for('static',filename='scripts/AppController.js') }}"></script>
-        <script src= "{{ url_for('static',filename='scripts/ledService.js') }}"></script>
-        <script src= "{{ url_for('static',filename='scripts/driveService.js') }}"></script>
-        <script src= "{{ url_for('static',filename='scripts/driveService.js') }}"></script>
-        <!--meta data tags-->
-          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static',filename='styles/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <title>{{ title }}</title>
+  <!--meta data tags-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 </head>
 <body ng-app="app" ng-controller="AppController as appCtrl">
   <nav class="white" role="navigation">
@@ -197,4 +180,20 @@
     </div>
   </footer>
   </body>
+  <!--cdn imports-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-leaflet-directive/0.10.0/angular-leaflet-directive.min.js"></script>
+  <!--customjs imports-->
+  <!--jQuery imports-->
+  <script src= "{{ url_for('static',filename='scripts/jquery/init.js') }}"></script>
+  <!--AngularJS imports-->
+  <script src= "{{ url_for('static',filename='scripts/app.js') }}"></script>
+  <script src= "{{ url_for('static',filename='scripts/MapController.js') }}"></script>
+  <script src= "{{ url_for('static',filename='scripts/AppController.js') }}"></script>
+  <script src= "{{ url_for('static',filename='scripts/ledService.js') }}"></script>
+  <script src= "{{ url_for('static',filename='scripts/driveService.js') }}"></script>
+  <script src= "{{ url_for('static',filename='scripts/driveService.js') }}"></script>
 </html>
