@@ -9,6 +9,7 @@ function AppController(ledService, driveService) {
     vm.requestedData = 'test data';
     vm.getData = ledService.getData;
     vm.driveForwards = driveService.driveForwards;
+    vm.driveBackwards = driveService.driveBackwards;
     vm.driveData = driveService.driveData;
     vm.driveData = driveService.driveData;
 }
