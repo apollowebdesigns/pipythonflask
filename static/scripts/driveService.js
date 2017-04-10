@@ -31,7 +31,7 @@ function driveService ($http, $log) {
     }
 
     function _driveBackwards() {
-        $log.info('fowards function entered');
+        $log.info('backwards function entered');
         $http.get("/hits/backwards")
         .then(function(response) {
             console.log('backwards hit');
