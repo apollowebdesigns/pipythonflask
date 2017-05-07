@@ -20,7 +20,7 @@ class TemplateData:
         self.backwards = backwards
         self.time = time
 
-templateDataInit = TemplateData('HELLO!', 'jumbotron', 'Forwards', 'Backwards', datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
+templateDataInit = TemplateData('HELLO!', 'jumbotron', 'Forwards', 'Backwards', 'Right', 'Left', datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
 
 @app.route('/hits/forwards', methods=['GET'])
 def move_forwards():
@@ -59,6 +59,8 @@ def hello():
       'heading' : 'jumbotron',
       'forwards' : 'Forwards',
       'backwards' : 'Backwards',
+      'right' : 'Right',
+      'left' : 'Left',
       'time': timeString
       }
    return render_template('main.html', **templateData)
