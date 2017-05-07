@@ -8,6 +8,8 @@ function driveService ($http, $log) {
     this.driveData = _driveData;
     this.driveForwards = _driveForwards;
     this.driveBackwards = _driveBackwards;
+    this.driveRight = _driveRight;
+    this.driveLeft = _driveLeft;
     var uniqueIP = "192.168.1.69";
     var uniqueIPparents = "192.168.1.74";
     var redSdCardIp = "192.168.1.73";
