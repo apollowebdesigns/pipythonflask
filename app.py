@@ -30,6 +30,14 @@ def move_forwards():
 def move_backwards():
     return motorbackwards.move()
 
+@app.route('/hits/right', methods=['GET'])
+def move_right():
+    return motorright.move()
+
+@app.route('/hits/left', methods=['GET'])
+def move_backwards():
+    return motorleft.move()
+
 @app.route('/hits/motor', methods=['GET'])
 def motor_test():
     return motortest.motormove()
