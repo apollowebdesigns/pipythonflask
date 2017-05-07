@@ -39,7 +39,7 @@ def move_right():
     return motorright.move()
 
 @app.route('/hits/left', methods=['GET'])
-def move_backwards():
+def move_left():
     return motorleft.move()
 
 @app.route('/hits/motor', methods=['GET'])
