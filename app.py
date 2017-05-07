@@ -15,11 +15,13 @@ app = Flask(__name__)
 CORS(app)
 
 class TemplateData:
-    def __init__(self, title, heading, forwards, backwards, time):
+    def __init__(self, title, heading, forwards, backwards, right, left, time):
         self.title = title
         self.heading = heading
         self.forwards = forwards
         self.backwards = backwards
+        self.right = right
+        self.left = left
         self.time = time
 
 templateDataInit = TemplateData('HELLO!', 'jumbotron', 'Forwards', 'Backwards', 'Right', 'Left', datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
