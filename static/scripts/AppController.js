@@ -12,4 +12,5 @@ function AppController(ledService, driveService) {
     vm.driveBackwards = driveService.driveBackwards;
     vm.driveData = driveService.driveData;
     vm.driveData = driveService.driveData;
+    vm.requestedData = driveService.requestedData;
 }
