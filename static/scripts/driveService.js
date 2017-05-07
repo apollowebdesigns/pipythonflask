@@ -38,4 +38,22 @@ function driveService ($http, $log) {
             this.requestedData = response.data;
         });
     }
+
+    function _driveRight() {
+        $log.info('right function entered');
+        $http.get("/hits/right")
+        .then(function(response) {
+            console.log('fowards hit');
+            this.requestedData = response.data;
+        });
+    }
+
+    function _driveLeft() {
+        $log.info('left function entered');
+        $http.get("/hits/left")
+        .then(function(response) {
+            console.log('backwards hit');
+            this.requestedData = response.data;
+        });
+    }
 }
