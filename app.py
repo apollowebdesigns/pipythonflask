@@ -7,6 +7,8 @@ from flask_cors import CORS, cross_origin
 import light
 import motorforwards
 import motorbackwards
+import motorright
+import motorleft
 import motortest
 GPIO.setmode(GPIO.BOARD)
 app = Flask(__name__)
