@@ -25,6 +25,24 @@ def move():
     
     print "Stopping motor"
     GPIO.output(Motor1E,GPIO.LOW)
+
+    Motor2A = 11
+    Motor2B = 13
+    Motor2E = 15
+    
+    GPIO.setup(Motor2A,GPIO.OUT)
+    GPIO.setup(Motor2B,GPIO.OUT)
+    GPIO.setup(Motor2E,GPIO.OUT)
+    
+    print "Turning second motor on"
+    GPIO.output(Motor2A,GPIO.HIGH)
+    GPIO.output(Motor2B,GPIO.LOW)
+    GPIO.output(Motor2E,GPIO.HIGH)
+    
+    sleep(2)
+    
+    print "Stopping motor"
+    GPIO.output(Motor2E,GPIO.LOW)
     
     GPIO.cleanup()
 
