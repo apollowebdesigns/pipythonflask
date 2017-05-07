@@ -12,9 +12,9 @@ def move():
     Motor1B = 18
     Motor1E = 22
     
-    Motor2A = 16
-    Motor2B = 18
-    Motor2E = 22
+    Motor2A = 11
+    Motor2B = 13
+    Motor2E = 15
 
     GPIO.setup(Motor1A,GPIO.OUT)
     GPIO.setup(Motor1B,GPIO.OUT)
