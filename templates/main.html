@@ -6,7 +6,7 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="{{ url_for('static',filename='styles/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="{{ url_for('static',filename='styles/controllerstyles.css') }}" type="text/css"/>
+  <link href="{{ url_for('static',filename='styles/nescontroller.css') }}" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Mitr|Squada+One" rel="stylesheet" />
   <title>{{ title }}</title>
   <!--meta data tags-->
@@ -114,15 +114,15 @@
     </div>
   </div>
 
-  <div class="control">
-    <div>
-      <div><a href="#">▲</a></div>
-      <div><a href="#">▲</a></div>
-      <div><a href="#">▲</a></div>
-      <div><a href="#">▲</a></div>
-    </div>
-    <a class="confirm" href="#">OK</a>
-  </nav>
+  <div id="control">
+    <ul>
+      <li><a href="#">▲</a></li>
+      <li><a href="#">▲</a></li>
+      <li><a href="#">▲</a></li>
+      <li><a href="#">▲</a></li>
+    </ul>
+    <a id="confirm" href="#">OK</a>
+  </div>
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
