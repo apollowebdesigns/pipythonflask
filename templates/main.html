@@ -119,7 +119,7 @@
       <section class="dpad-pane">
         <div class="dpad-hole"></div>
         <div id="dpad">
-          <canvas height="150" id="dpad-body" width="150"></canvas><button class="button" id="up"></button><button class="button" id="right"></button><button class="button" id="down"></button><button class="button" id="left"></button>
+          <canvas height="150" id="dpad-body" width="150"></canvas><button class="button" id="up" ng-click="appCtrl.driveForwards()"></button><button class="button" id="right" ng-click="appCtrl.driveRight()"></button><button class="button" id="down" ng-click="appCtrl.driveBackwards()"></button><button class="button" id="left" ng-click="appCtrl.driveLeft()"></button>
         </div>
       </section>
       <section class="menu-pane">
