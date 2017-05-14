@@ -6,7 +6,7 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="{{ url_for('static',filename='styles/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="{{ url_for('static',filename='styles/nescontroller.css') }}" type="text/css"/>
+  <link href="{{ url_for('static',filename='styles/controllerstyles.css') }}" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Mitr|Squada+One" rel="stylesheet" />
   <title>{{ title }}</title>
   <!--meta data tags-->
@@ -114,39 +114,15 @@
     </div>
   </div>
 
-  <figure id="nespad">
-      <div class="cord"></div>
-      <section class="dpad-pane">
-        <div class="dpad-hole"></div>
-        <div id="dpad">
-          <canvas height="150" id="dpad-body" width="150"></canvas><button class="button" id="up" ng-click="appCtrl.driveForwards()"></button><button class="button" id="right" ng-click="appCtrl.driveRight()"></button><button class="button" id="down" ng-click="appCtrl.driveBackwards()"></button><button class="button" id="left" ng-click="appCtrl.driveLeft()"></button>
-        </div>
-      </section>
-      <section class="menu-pane">
-        <div class="labels">
-          <label class="select" for="select">Select</label><label class="start" for="start">Start</label>
-        </div>
-        <div class="buttons">
-          <button class="button select" id="select">Select</button><button class="button start" id="start">Start</button>
-        </div>
-      </section>
-      <section class="action-pane">
-        <div class="logo">
-          Nintendo
-        </div>
-        <div class="buttons">
-          <label class="label">
-            <div class="caption">
-              B
-            </div>
-            <button class="button" id="b"></button></label><label class="label">
-            <div class="caption">
-              A
-            </div>
-            <button class="button" id="a"></button></label>
-        </div>
-      </section>
-    </figure>
+  <nav class="control">
+    <ul>
+      <li><a href="#">▲</a></li>
+      <li><a href="#">▲</a></li>
+      <li><a href="#">▲</a></li>
+      <li><a href="#">▲</a></li>
+    </ul>
+    <a class="confirm" href="#">OK</a>
+  </nav>
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -210,6 +186,5 @@
   <script src= "{{ url_for('static',filename='scripts/MapController.js') }}"></script>
   <script src= "{{ url_for('static',filename='scripts/AppController.js') }}"></script>
   <script src= "{{ url_for('static',filename='scripts/ledService.js') }}"></script>
-  <script src= "{{ url_for('static',filename='scripts/driveService.js') }}"></script>
   <script src= "{{ url_for('static',filename='scripts/driveService.js') }}"></script>
 </html>
