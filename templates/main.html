@@ -6,7 +6,6 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="{{ url_for('static',filename='styles/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="{{ url_for('static',filename='styles/nescontroller.css') }}" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Mitr|Squada+One" rel="stylesheet" />
   <title>{{ title }}</title>
   <!--meta data tags-->
@@ -100,10 +99,16 @@
           <div>
             <h1 class="{{heading}}">Pi Motors</h1>
             <div class="row">
+              <div class="row">
                 <button class="btn" ng-click="appCtrl.driveForwards()">{{ forwards }}</button>
-                <button class="btn" ng-click="appCtrl.driveBackwards()">{{ backwards }}</button>
-                <button class="btn" ng-click="appCtrl.driveRight()">{{ right }}</button>
+              </div>
+              <div class="row">
                 <button class="btn" ng-click="appCtrl.driveLeft()">{{ left }}</button>
+                <button class="btn" ng-click="appCtrl.driveRight()">{{ right }}</button>
+              </div>
+              <div class="row">
+                  <button class="btn" ng-click="appCtrl.driveBackwards()">{{ backwards }}</button>
+              </div>
             </div>
           </div>
           <h4>Which way is the pi going?</h4>
@@ -112,16 +117,6 @@
       </div>
 
     </div>
-  </div>
-
-  <div id="control">
-    <ul>
-      <li><a href="#">▲</a></li>
-      <li><a href="#">▲</a></li>
-      <li><a href="#">▲</a></li>
-      <li><a href="#">▲</a></li>
-    </ul>
-    <a id="confirm" href="#">OK</a>
   </div>
 
   <div class="parallax-container valign-wrapper">
@@ -180,7 +175,6 @@
   <!--customjs imports-->
   <!--jQuery imports-->
   <script src= "{{ url_for('static',filename='scripts/jquery/init.js') }}"></script>
-  <script src= "{{ url_for('static',filename='scripts/jquery/nesstyles.js') }}"></script>
   <!--AngularJS imports-->
   <script src= "{{ url_for('static',filename='scripts/app.js') }}"></script>
   <script src= "{{ url_for('static',filename='scripts/MapController.js') }}"></script>
