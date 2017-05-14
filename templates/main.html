@@ -6,6 +6,8 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="{{ url_for('static',filename='styles/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static',filename='styles/nescontroller.css') }}" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Mitr|Squada+One" rel="stylesheet" />
   <title>{{ title }}</title>
   <!--meta data tags-->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -112,6 +114,39 @@
     </div>
   </div>
 
+  <figure id="nespad">
+      <div class="cord"></div>
+      <section class="dpad-pane">
+        <div class="dpad-hole"></div>
+        <div id="dpad">
+          <canvas height="150" id="dpad-body" width="150"></canvas><button class="button" id="up"></button><button class="button" id="right"></button><button class="button" id="down"></button><button class="button" id="left"></button>
+        </div>
+      </section>
+      <section class="menu-pane">
+        <div class="labels">
+          <label class="select" for="select">Select</label><label class="start" for="start">Start</label>
+        </div>
+        <div class="buttons">
+          <button class="button select" id="select">Select</button><button class="button start" id="start">Start</button>
+        </div>
+      </section>
+      <section class="action-pane">
+        <div class="logo">
+          Nintendo
+        </div>
+        <div class="buttons">
+          <label class="label">
+            <div class="caption">
+              B
+            </div>
+            <button class="button" id="b"></button></label><label class="label">
+            <div class="caption">
+              A
+            </div>
+            <button class="button" id="a"></button></label>
+        </div>
+      </section>
+    </figure>
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -169,6 +204,7 @@
   <!--customjs imports-->
   <!--jQuery imports-->
   <script src= "{{ url_for('static',filename='scripts/jquery/init.js') }}"></script>
+  <script src= "{{ url_for('static',filename='scripts/jquery/nesstyles.js') }}"></script>
   <!--AngularJS imports-->
   <script src= "{{ url_for('static',filename='scripts/app.js') }}"></script>
   <script src= "{{ url_for('static',filename='scripts/MapController.js') }}"></script>
