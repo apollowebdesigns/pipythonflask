@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="{{ url_for('static',filename='styles/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/css?family=Mitr|Squada+One" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/buttons.css') }}">
   <title>{{ title }}</title>
   <!--meta data tags-->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -99,7 +101,7 @@
               <div class="row">
                 <button class="btn" ng-click="appCtrl.driveForwards()">{{ forwards }}</button>
               </div>
-              <div class="row">
+              <div class="row button-background">
                 <button class="btn" ng-click="appCtrl.driveLeft()">{{ left }}</button>
                 <button class="btn-floating btn-large waves-effect waves-light red" ng-click="appCtrl.getData()"><i class="large material-icons">volume_up</i></button>
                 <button class="btn" ng-click="appCtrl.driveRight()">{{ right }}</button>
