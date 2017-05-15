@@ -3,7 +3,7 @@
         var currentUrl = $(location).attr('href');
         var firstPosition = currentUrl.indexOf("1");
         var lastPosition = currentUrl.indexOf(":");
-        var removeSlash = currentUrl.length - 2;
+        var removeSlash = currentUrl.length - 1;
         var secondUrl = currentUrl.toString().slice(0, removeSlash);
         console.log("the second url is");
         console.log(secondUrl);
