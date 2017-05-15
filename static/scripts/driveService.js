@@ -10,6 +10,9 @@ function driveService ($http, $log) {
     this.driveBackwards = _driveBackwards;
     this.driveRight = _driveRight;
     this.driveLeft = _driveLeft;
+
+    this.requestedData = "";
+
     var uniqueIP = "192.168.1.69";
     var uniqueIPparents = "192.168.1.74";
     var redSdCardIp = "192.168.1.73";
@@ -18,8 +21,9 @@ function driveService ($http, $log) {
         $log.info('driving function entered function entered');
         $http.get("/hits/motor")
         .then(function(response) {
-            console.log('data received');
-            this.requestedData = response.data;
+            $log.info('data received');
+            this.requestedData = "";
+            this.requestedData.concat(response.data);
         });
     }
 
@@ -27,8 +31,9 @@ function driveService ($http, $log) {
         $log.info('fowards function entered');
         $http.get("/hits/forwards")
         .then(function(response) {
-            console.log('fowards hit');
-            this.requestedData = response.data;
+            $log.info('fowards hit');
+            this.requestedData = "";
+            this.requestedData.concat(response.data);
         });
     }
 
@@ -36,7 +41,8 @@ function driveService ($http, $log) {
         $log.info('backwards function entered');
         $http.get("/hits/backwards")
         .then(function(response) {
-            console.log('backwards hit');
+            $log.info('backwards hit');
+            this.requestedData = "";
             this.requestedData = response.data;
         });
     }
@@ -45,7 +51,8 @@ function driveService ($http, $log) {
         $log.info('right function entered');
         $http.get("/hits/right")
         .then(function(response) {
-            console.log('fowards hit');
+            $log.info('right hit');
+            this.requestedData = "";
             this.requestedData = response.data;
         });
     }
@@ -54,7 +61,8 @@ function driveService ($http, $log) {
         $log.info('left function entered');
         $http.get("/hits/left")
         .then(function(response) {
-            console.log('backwards hit');
+            $log.info('left hit');
+            this.requestedData = "";
             this.requestedData = response.data;
         });
     }
