@@ -39,6 +39,14 @@ function MapController ($scope, $log) {
         draggable: true
     };
 
+    var secondMarker = {
+        lat: 51,
+        lng: 2,
+        focus: true,
+        message: "Hey, drag me if you want",
+        draggable: true
+    };
+
     angular.extend($scope, {
         london: {
             lat: 51.505,
@@ -51,6 +59,25 @@ function MapController ($scope, $log) {
         position: {
             lat: 51,
             lng: 0
+        },
+        events: { // or just {} //all events
+            markers:{
+                enable: [ 'dragend' ]
+                //logic: 'emit'
+            }
+        }
+    }, {
+        exeter: {
+            lat: 50.505,
+            lng: -0.09,
+            zoom: 8
+        },
+        markers: {
+            secondMarker: angular.copy(secondMarker)
+        },
+        position: {
+            lat: 51,
+            lng: 3
         },
         events: { // or just {} //all events
             markers:{
