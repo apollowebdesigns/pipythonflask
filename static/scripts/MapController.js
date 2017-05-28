@@ -17,8 +17,8 @@ function MapController ($scope, $log) {
 
                     theflat: {
                         group: 'southwest',
-                        lat: 50,
-                        lng: 3.3,
+                        lat: 50.713270099999995,
+                        lng: -3.5368812999999997,
                         label: {
                             message: "The Flat",
                             options: {
