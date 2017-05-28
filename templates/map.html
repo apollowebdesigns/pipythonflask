@@ -17,7 +17,7 @@
         <script src= "{{ url_for('static',filename='scripts/driveService.js') }}"></script>
     </head>
     <body ng-app="app" ng-controller="MapController">
-        <leaflet lf-center="chicago" markers="markers" height="480px" width="100%"></leaflet>
+        <leaflet  lf-center="london" markers="markers" height="480px" width="100%"></leaflet>
         <h1>Change icon opacity</h1>
         <p>Move the slider to change the icon opacity.</p>
         <input type="range" min="0" max="1" step="0.01" ng-model="markers.m1.opacity" />
