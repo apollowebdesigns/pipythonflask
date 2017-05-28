@@ -7,7 +7,7 @@ MapController.$inject = ['$scope', '$log'];
 function MapController ($scope, $log) {
 
     angular.extend($scope, {
-                london: {
+                southwest: {
                     lat: 51.505,
                     lng: -0.09,
                     zoom: 8
@@ -15,48 +15,48 @@ function MapController ($scope, $log) {
 
                 markers: {
 
-                    stoke: {
-                        group: 'london',
-                        lat: 51.5615,
-                        lng: -0.0731,
+                    theflat: {
+                        group: 'southwest',
+                        lat: 50,
+                        lng: 3.3,
                         label: {
-                            message: "Stoke",
+                            message: "The Flat",
                             options: {
                                 noHide: true
                             }
                         }
                     },
 
-                    dalston: {
-                        group: 'london',
+                    beechfield: {
+                        group: 'southwest',
                         lat: 51.545,
                         lng: -0.070,
                         label: {
-                            message: "Dalston",
+                            message: "Beechfield",
                             options: {
                                 noHide: true
                             }
                         }
                     },
 
-                    wandsworth: {
-                        group: 'london',
+                    annashouse: {
+                        group: 'southwest',
                         lat: 51.4644,
                         lng:-0.1924,
                         label: {
-                            message: "Wandsworth",
+                            message: "Annas House",
                             options: {
                                 noHide: true
                             }
                         }
                     },
 
-                    battersea: {
-                        group: 'london',
+                    work: {
+                        group: 'southwest',
                         lat: 51.4638,
                         lng: -0.1677,
                         label: {
-                            message: "Battersea",
+                            message: "Work",
                             options: {
                                 noHide: true
                             }
